@@ -197,7 +197,7 @@
 <!-- Stats -->
 <div class="stats-bar" style="margin-left: 1.5rem; margin-right: 1.5rem;">
   <div class="stat">
-    <div class="stat-num" id="biz-count">—</div>
+    <div class="stat-num">6</div>
     <div class="stat-label">Businesses</div>
   </div>
   <div class="stat">
@@ -205,7 +205,7 @@
     <div class="stat-label">Founded</div>
   </div>
   <div class="stat">
-    <div class="stat-num">8</div>
+    <div class="stat-num">3</div>
     <div class="stat-label">Categories</div>
   </div>
   <div class="stat">
@@ -244,14 +244,9 @@
   <div class="count-display"><span id="visible-count">0</span> businesses shown</div>
   <div class="filters">
     <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="cafe">☕ Cafe</button>
-    <button class="filter-btn" data-filter="food">🍽️ Restaurant</button>
+    <button class="filter-btn" data-filter="food">🍽️ Food</button>
     <button class="filter-btn" data-filter="retail">🛍️ Retail</button>
     <button class="filter-btn" data-filter="health">💆 Health</button>
-    <button class="filter-btn" data-filter="trades">🔧 Trades</button>
-    <button class="filter-btn" data-filter="accom">🏠 Accommodation</button>
-    <button class="filter-btn" data-filter="creative">🎨 Creative</button>
-    <button class="filter-btn" data-filter="other">📦 Other</button>
   </div>
   <div class="directory-grid" id="directory-grid">
     <div class="empty-state">No businesses listed yet. Be the first to add one!</div>
@@ -350,121 +345,68 @@
 
 <script>
   const businesses = [
-    // Cafe
+    // Food - Byron Bay
     {
-      name: "The Moorish Café",
-      category: "cafe",
-      categoryLabel: "Cafe",
-      description: "Classic Byron breakfast spot with a sunny courtyard. Ask about Bitcoin at the counter.",
-      location: "Byron Bay",
-      tags: ["Breakfast", "Coffee", "Courtyard"],
-      contact: "The Moorish Café, Byron Bay"
-    },
-    {
-      name: "Top Shop",
-      category: "cafe",
-      categoryLabel: "Cafe",
-      description: "Local legend Top Shop does great coffee and casual eats. Worth asking if they take Bitcoin next time you're in.",
-      location: "Byron Bay",
-      tags: ["Coffee", "All-day dining"],
-      contact: "Top Shop, Byron Bay"
-    },
-    {
-      name: "Com功能性",
-      category: "cafe",
-      categoryLabel: "Cafe",
-      description: "Hidden gem in Mullumbimby serving excellent coffee and local produce.",
-      location: "Mullumbimby",
-      tags: ["Coffee", "Organic", "Mullumbimby"],
-      contact: "Com功能性, Mullumbimby"
-    },
-    // Food
-    {
-      name: "Maya",
+      name: "Locavore",
       category: "food",
-      categoryLabel: "Restaurant",
-      description: "Modern Australian with serious Middle Eastern flavours. Ask about Bitcoin for bookings.",
+      categoryLabel: "Food",
+      description: "Regenerative, grass-fed and finished beef. Seasonal chicken, pork, lamb and game. Online or in-store in Byron Bay.",
       location: "Byron Bay",
-      tags: ["Dinner", "Middle Eastern", "Bookings"],
-      contact: "Maya, Byron Bay"
+      tags: ["Grass-fed", "Organic", "Beef", "Online & In-store"],
+      contact: "locavorebyron.com",
+      url: "https://locavorebyron.com/"
     },
     {
-      name: "Fleet",
+      name: "Chihuahua",
       category: "food",
-      categoryLabel: "Restaurant",
-      description: "Intimate fine dining in a historic building. Call to inquire about Bitcoin for large bookings.",
+      categoryLabel: "Food",
+      description: "Delicious tacos in the heart of Byron town. Ask about the 10% Lightning discount at checkout!",
       location: "Byron Bay",
-      tags: ["Fine dining", "Intimate"],
-      contact: "Fleet, Byron Bay"
+      tags: ["Tacos", "Lightning discount", "Dinner"],
+      contact: "chihuahuabyronbay.com.au",
+      url: "https://www.chihuahuabyronbay.com.au/"
     },
-    // Accommodation
     {
-      name: "The International Byron Bay",
-      category: "accom",
-      categoryLabel: "Accommodation",
-      description: "Boutique hostel in the heart of town. Great for digital nomads and Bitcoiners.",
+      name: "Yellow Flower Indian",
+      category: "food",
+      categoryLabel: "Food",
+      description: "Perfect for Bitcoiner vegans, vegetarians, or anyone craving a spicy curry. The lentil dal is legendary among regulars.",
       location: "Byron Bay",
-      tags: ["Hostel", "Central", "Digital nomads"],
-      contact: "The International, Byron Bay"
-    },
-    // Creative
-    {
-      name: "Byron Stained Glass",
-      category: "creative",
-      categoryLabel: "Creative",
-      description: "Handmade stained glass art and workshops. Commission a piece and pay in Bitcoin.",
-      location: "Byron Bay",
-      tags: ["Art", "Workshops", "Custom orders"],
-      contact: "Byron Stained Glass, Byron Bay"
-    },
-    // Trades
-    {
-      name: "North Coast Sparky",
-      category: "trades",
-      categoryLabel: "Trades",
-      description: "Licensed electrician taking on new residential and commercial clients. Bitcoin welcome for labour.",
-      location: "Ballina",
-      tags: ["Electrician", "Licensed", "Residential"],
-      contact: "North Coast Sparky, Ballina"
-    },
-    // Health
-    {
-      name: "Byron Natural Health",
-      category: "health",
-      categoryLabel: "Health",
-      description: "Naturopathy and herbal medicine. Flexible with payment methods — just ask.",
-      location: "Byron Bay",
-      tags: ["Naturopathy", "Herbal", "Wellness"],
-      contact: "Byron Natural Health, Byron Bay"
+      tags: ["Indian", "Vegan", "Vegetarian", "Curry"],
+      contact: "yellowflowerindian.com",
+      url: "https://www.yellowflowerindian.com/"
     },
     // Retail
     {
-      name: "Go Violet Vintage",
+      name: "Soap21",
       category: "retail",
       categoryLabel: "Retail",
-      description: "Curated vintage clothing and accessories. Bitcoin for quality pieces.",
+      description: "Small-batch tallow soaps made in a kitchen-studio. Short ingredients list, no hidden chemicals. Firm bars with a rich creamy lather.",
       location: "Byron Bay",
-      tags: ["Vintage", "Clothing", "Accessories"],
-      contact: "Go Violet Vintage, Byron Bay"
+      tags: ["Tallow soap", "Small-batch", "Zero chemical"],
+      contact: "soap21.com",
+      url: "https://soap21.com/shop/"
     },
     {
-      name: "The Source Bulk Foods",
+      name: "Beautiflora",
       category: "retail",
       categoryLabel: "Retail",
-      description: "Bulk wholefoods — bring your own container and pay with Bitcoin.",
+      description: "Grown from a hinterland home studio into a leading floral design business. Fresh flowers, indoor plants, installations and custom arrangements.",
       location: "Byron Bay",
-      tags: ["Bulk foods", "Zero waste"],
-      contact: "The Source, Byron Bay"
+      tags: ["Flowers", "Events", "Custom arrangements"],
+      contact: "beautiflora.com",
+      url: "https://www.beautiflora.com/"
     },
-    // Other
+    // Health
     {
-      name: "Northern Rivers Car Detailing",
-      category: "other",
-      categoryLabel: "Other",
-      description: "Mobile car detailing service. Premium job? Pay in Bitcoin and save the bank transfer fees.",
-      location: "Lennox Head",
-      tags: ["Detailing", "Mobile", "Premium"],
-      contact: "NR Car Detailing, Lennox Head"
+      name: "Quantum Uplift",
+      category: "health",
+      categoryLabel: "Health",
+      description: "Advanced human optimisation. Each session blends leading-edge biophysics technologies with conscious awareness and practical education.",
+      location: "Byron Bay",
+      tags: ["Biophysics", "Performance", "Reset & Recharge"],
+      contact: "quantumuplift.com",
+      url: "https://www.quantumuplift.com/"
     }
   ];
 
@@ -486,7 +428,7 @@
         </div>
         <div class="biz-desc">${b.description}</div>
         <div class="biz-tags">${b.tags.map(t => `<span class="biz-tag">${t}</span>`).join('')}</div>
-        <div class="biz-contact">📍 ${b.location}</div>
+        <div class="biz-contact">📍 ${b.location} · <a href="${b.url}" target="_blank" style="color:var(--teal)">${b.contact}</a></div>
       </div>
     `).join('');
   }
@@ -500,7 +442,6 @@
   });
 
   renderDirectory();
-  document.getElementById('biz-count').textContent = businesses.length;
 </script>
 
 </body>
